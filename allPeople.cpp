@@ -59,16 +59,25 @@ float People::getWeight()
 	return weight;
 }
 
-void People::setSurname(string Surname){
-	surname = Surname;
+void People::setSurname(string Surname) {
+	if (Surname == " ")
+		surname = Surname;
+	else
+		cout << "Enter again surmane";
 }
 
 void People::setName(string Name){
-	name = Name;
+	if (Name == " ")
+		name = Name;
+	else
+		cout << "Enter again Name";
 }
 
 void People::setPatronymic(string Patronymic){
-	patronymic = Patronymic;
+	if (Patronymic == " ")
+		patronymic = Patronymic;
+	else
+		cout << "Enter again Patronymic";
 }
 
 void People::setGender(int g){
@@ -76,9 +85,15 @@ void People::setGender(int g){
 }
 
 void People::setGrowth(unsigned Growth){
-	growth = Growth;
+	if (Growth > 220)
+		growth = Growth;
+	else
+		cout << "Enter again Growth";
 }
 
-void People::setWeight(float Growth){
-	growth = Growth;
+void People::setWeight(float Weight){
+	if (Weight > 220)
+		weight = Weight;
+	else
+		cout << "Enter again Weight";
 }
