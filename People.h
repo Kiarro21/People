@@ -36,6 +36,7 @@ public:
 	void setName(string Name);
 	void setPatronymic(string Patronymic);
 	void setGender(int g);
+	void setDate(int Date);
 	void setGrowth(unsigned Growth);
 	void setWeight(float Weight);
 };

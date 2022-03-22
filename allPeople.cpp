@@ -4,7 +4,7 @@
 
 std::ostream& operator<< (std::ostream& out, const People& people) {
 	out << "Name: " << people.surname << " " << people.name << " " << people.patronymic << std::endl;
-	out << "Gender: "<< people.gender << std::endl;
+	out << "Gender: "<< (people.gender ? "M" : "W") << std::endl;
 	out << "Growth: " << people.growth << std::endl;
 	out << "Weight: " << people.weight << std::endl;
 
@@ -82,6 +82,14 @@ void People::setPatronymic(string Patronymic){
 
 void People::setGender(int g){
 	gender = g;
+}
+
+void People::setDate(int Date)
+{
+	if (Date <= 2022)
+		date = Date;
+	else
+		cout << "Enter again Date";
 }
 
 void People::setGrowth(unsigned Growth){
